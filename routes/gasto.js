@@ -48,7 +48,7 @@ router.get("/:id", async (req, res) => {
   try {
     const [result] = await db.query(
       `SELECT * FROM gasto
-    WHERE id_gasto = 1`,
+    WHERE id_gasto = ?`,
       [id]
     );
 
